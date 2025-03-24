@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="77dp"
+            android:layout_height="111dp"
+            android:src="@drawable/default_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="Movie Poster" />
+
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/moviePoster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/yearIcon"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/year_icon"
+            app:layout_constraintStart_toEndOf="@+id/moviePoster"
+            app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+            android:contentDescription="Year Icon" />
+
+        <TextView
+            android:id="@+id/movieYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/yearIcon"
+            app:layout_constraintTop_toTopOf="@+id/yearIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/yearIcon" />
+
+        <ImageView
+            android:id="@+id/genreIcon"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/genre_icon"
+            app:layout_constraintStart_toEndOf="@+id/movieYear"
+            app:layout_constraintTop_toTopOf="@+id/movieYear"
+            app:layout_constraintBottom_toBottomOf="@+id/movieYear"
+            android:contentDescription="Genre Icon" />
+
+        <TextView
+            android:id="@+id/movieGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/genreIcon"
+            app:layout_constraintTop_toTopOf="@+id/genreIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/genreIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
